@@ -161,7 +161,8 @@ def generate_pdf(text):
     return "analysis_report.pdf"
 
 # ================= GROQ CLIENT =================
-client = Groq(api_key="YOUR_GROQ_API_KEY_HERE")
+import os
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # ================= UI =================
 st.title("🎯 AI Skill Intelligence Engine")
